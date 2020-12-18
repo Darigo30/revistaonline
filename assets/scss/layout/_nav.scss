@@ -1,0 +1,38 @@
+     .barranav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: $gris 1px solid;
+        &__logo {
+            font-size: x-large;
+            display: inline-block;
+            font-family: $diario;
+            font-weight: $bold;
+        }
+        &__lista {
+                ul {
+                text-transform: uppercase;
+                font-family: $news;
+                font-size: $medium;
+                }
+                li {
+                    display: inline-block;
+                }
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: small;
+                    color: $black;
+                    font-weight: $bold;
+                    color: $tags;
+                }
+        }
+        &__input-menu {
+            border-radius: 20px;
+            border-style: solid;
+            width: 120px;
+        }
+    }
+
+
+

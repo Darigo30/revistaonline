@@ -1,0 +1,114 @@
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 20px;
+    width: 960px;
+    margin: 20px auto;
+}
+.noticias{
+    &__img-new{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+    }
+    &__noticia-content{
+        width: 100%;
+        height: 240px;
+    }
+
+}
+.contendor-derecho{
+    display: none;
+}
+
+
+//Medias Querys
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 320px) {
+    li.barranav{
+        &__hidden{
+            display: none;
+        }
+    }
+}
+@media (min-width: 576px) {
+    li.barranav{
+        &__hidden{
+            display: inline-block;
+        }
+    }
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+   .contendor-derecho {
+        display: block;
+        grid-column-start: 3;
+        grid-column-end: 4;
+        width: 320px;
+        padding: 10px;
+        &__tags{
+            border-top: 1px solid $black;
+            border-bottom: 1px solid $black;
+            li{
+                display: inline-block;
+                background-color:$tags;
+                color: $blanco;
+                padding: 2px;
+                cursor: pointer;
+            }
+        }
+        &__item-dest img{
+            width: 100%;
+            height: 200px;
+        }
+        &__tit-ntd{
+            font-size: $xx-large;
+        }
+    }
+    .noticias{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 10px;
+            &__new{
+                width: 180px;
+                display: inline-block;
+                margin: 5px;
+                cursor: pointer
+            }
+            &__img-new{
+                width: 100%;
+                height: auto;
+            }
+    }
+    .barranav {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        padding: 10px;
+    }
+    .suscribete{
+         grid-column-start: 1;
+         grid-column-end: 4;
+    }
+    footer{
+        grid-column-start: 1;
+         grid-column-end: 4;
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+    body{
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .barranav{
+        &__logo {
+            font-size: xx-large;
+        }
+    }
+}
